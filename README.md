@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&text=Ansh%20%7C%20Full%20Stack%20Dev%20%26%20AIML&fontAlign=50&fontAlignY=35&color=0:0f2027,50:203a43,100:2c5364&fontColor=ffffff" />
+  <img src="[https://capsule-render.vercel.app/api?type=waving&height=200&text=Ansh%20%7C%20Full%20Stack%20Dev%20%26%20AIML&fontAlign=50&fontAlignY=35&color=0:0f2027,50:203a43,100:2c5364&fontColor=ffffff](https://imgs.search.brave.com/87U_q3ikoIi_hK6dO_IMBqhT4vPuRN0h3V28FbWPmKc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2MzL2Fh/LzhlL2MzYWE4ZTQ0/ZGQ0MjA2NmQ5YjQw/OWY2OGQwZTcxYjAy/LmpwZw)" />
 </p>
 # 💫 About Me:
 ## Hi 👋
