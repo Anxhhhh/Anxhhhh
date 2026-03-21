@@ -1,6 +1,19 @@
 # 💫 About Me:
-## Hi 👋<br><br>I'm a Full Stack Developer and AIML student passionate about building modern web apps and AI-driven solutions.<br><br>💻 Skills:<br>Frontend:<br>HTML  CSS  JavaScript  React  TypeScript  Tailwind  GSAP<br>Backend:<br>Node.js  Python<br>Frameworks:<br>Express.js  Spring Boot<br>Databases:<br>MongoDB  MySQL<br>Cloud & DevOps:<br>AWS  Docker  Git/GitHub<br><br>Tools:<br>Figma  Git/GitHub  Blender  Postman<br><br>🚀 Currently learning AI ML and building full stack projects  <br>🎯 Goal: To create scalable and intelligent applications
+## Hi 👋
 
+I'm a Full Stack Developer and AIML student passionate about building modern web apps and AI-driven solutions.
+
+💻 **Skills**
+
+**Frontend:** HTML, CSS, JavaScript, React, TypeScript, Tailwind, GSAP  
+**Backend:** Node.js, Python  
+**Frameworks:** Express.js, Spring Boot  
+**Databases:** MongoDB, MySQL  
+**Cloud & DevOps:** AWS, Docker, Git/GitHub  
+**Tools:** Figma, Git/GitHub, Blender, Postman  
+
+🚀 Currently learning AI/ML and building full stack projects  
+🎯 Goal: To create scalable and intelligent applications
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/itsansh_123) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/anshraj-singh-thakur-349ab533b/) 
