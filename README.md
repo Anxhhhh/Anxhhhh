@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./banner.jpg" width="100%" height="200" />
+  <img src="./banner.jpg" width="80%" style="max-height:200px; object-fit:contain;" />
 </p>
 # 💫 About Me:
 ## Hi 👋
