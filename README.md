@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://imgs.search.brave.com/87U_q3ikoIi_hK6dO_IMBqhT4vPuRN0h3V28FbWPmKc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2MzL2Fh/LzhlL2MzYWE4ZTQ0ZGU0MjA2NmQ5YjQwOWY2OGQwZTcxYjAyLmpwZw" width="100%" />
+  <img src="./banner.png" width="100%" />
 </p>
 # 💫 About Me:
 ## Hi 👋
