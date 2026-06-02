@@ -1,4 +1,4 @@
-```aura width=860 height=580
+```aura inline width=860 height=580 align=center
 <div
   style={{
     width: "100%",
@@ -497,6 +497,8 @@
 </div>
 </div>
 ```
+
+<br />
 
 ```aura width=160 height=48 link="https://github.com/Anxhhhh" inline align=center
 <div
