@@ -23,6 +23,21 @@
     }}
   >
     <defs>
+      <style>{`
+        @keyframes borderBeam {
+          0% { stroke-dashoffset: 2835; }
+          100% { stroke-dashoffset: 0; }
+        }
+        .glow-path {
+          stroke-dasharray: 180 2655;
+          animation: borderBeam 6s linear infinite;
+        }
+      `}</style>
+      <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#a855f7" />
+        <stop offset="50%" stopColor="#06b6d4" />
+        <stop offset="100%" stopColor="#a855f7" />
+      </linearGradient>
       <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
         <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.02)" strokeWidth="1" />
       </pattern>
@@ -49,6 +64,17 @@
     <rect width="860" height="580" fill="url(#topLeftGlow)" />
     <rect width="860" height="580" fill="url(#bottomRightGlow)" />
     <rect width="280" height="580" fill="url(#dotPattern)" mask="url(#leftMask)" />
+    <rect
+      x="0.5"
+      y="0.5"
+      width="859"
+      height="579"
+      rx="24"
+      fill="none"
+      stroke="url(#glowGradient)"
+      strokeWidth="1.5"
+      class="glow-path"
+    />
     <path d="M 28 16 L 16 16 L 16 28" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
     <path d="M 832 16 L 844 16 L 844 28" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
     <path d="M 28 564 L 16 564 L 16 552" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
