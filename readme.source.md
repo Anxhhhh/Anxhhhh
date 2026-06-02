@@ -25,51 +25,41 @@
     <defs>
       <style>{`
         @keyframes borderBeam {
-          0%   { stroke-dashoffset: 2835; }
+          0%   { stroke-dashoffset: 2839; }
           100% { stroke-dashoffset: 0; }
         }
         @keyframes borderBeamReverse {
           0%   { stroke-dashoffset: 0; }
-          100% { stroke-dashoffset: 2835; }
+          100% { stroke-dashoffset: 2839; }
         }
         @keyframes bracketPulse {
           0%, 100% { opacity: 0.2; stroke: rgba(255,255,255,0.2); }
           50%       { opacity: 1;   stroke: #a855f7; filter: drop-shadow(0 0 4px #a855f7); }
-        }
-        @keyframes avatarHalo {
-          0%, 100% { opacity: 0.4; r: 62; }
-          50%       { opacity: 1;   r: 68; }
-        }
-        @keyframes avatarHaloOuter {
-          0%, 100% { opacity: 0.15; r: 75; }
-          50%       { opacity: 0.5;  r: 82; }
         }
         @keyframes breatheAura {
           0%, 100% { opacity: 0; }
           50%       { opacity: 1; }
         }
         .beam-main {
-          stroke-dasharray: 260 2315;
-          animation: borderBeam 4s linear infinite;
+          stroke-dasharray: 200 2639;
+          animation: borderBeam 5s linear infinite;
         }
         .beam-blur {
-          stroke-dasharray: 260 2315;
-          animation: borderBeam 4s linear infinite;
+          stroke-dasharray: 200 2639;
+          animation: borderBeam 5s linear infinite;
         }
         .beam-secondary {
-          stroke-dasharray: 140 2555;
-          animation: borderBeamReverse 6s linear infinite;
+          stroke-dasharray: 120 2719;
+          animation: borderBeamReverse 7s linear infinite;
         }
         .beam-secondary-blur {
-          stroke-dasharray: 140 2555;
-          animation: borderBeamReverse 6s linear infinite;
+          stroke-dasharray: 120 2719;
+          animation: borderBeamReverse 7s linear infinite;
         }
         .bracket { animation: bracketPulse 3s ease-in-out infinite; }
         .bracket:nth-child(2) { animation-delay: 0.75s; }
         .bracket:nth-child(3) { animation-delay: 1.5s; }
         .bracket:nth-child(4) { animation-delay: 2.25s; }
-        .avatar-halo       { animation: avatarHalo      3.5s ease-in-out infinite; }
-        .avatar-halo-outer { animation: avatarHaloOuter 3.5s ease-in-out infinite; animation-delay: 0.4s; }
         .aura-overlay      { animation: breatheAura     5s ease-in-out infinite; }
       `}</style>
 
@@ -78,10 +68,7 @@
         <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
       </filter>
       <filter id="beamBlur" x="-10%" y="-10%" width="120%" height="120%">
-        <feGaussianBlur stdDeviation="6" />
-      </filter>
-      <filter id="haloBlur" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="10" />
+        <feGaussianBlur stdDeviation="4" />
       </filter>
 
       <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -131,27 +118,18 @@
 
     <rect width="860" height="580" rx="24" fill="url(#auraGrad)" class="aura-overlay" />
 
-    <circle cx="140" cy="290" r="75" fill="none"
-      stroke="url(#glowGradient)" strokeWidth="18"
-      filter="url(#haloBlur)"
-      class="avatar-halo-outer" />
-    <circle cx="140" cy="290" r="62" fill="none"
-      stroke="url(#glowGradient)" strokeWidth="8"
-      filter="url(#haloBlur)"
-      class="avatar-halo" />
-
     <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
-      stroke="url(#glowGradient)" strokeWidth="14"
+      stroke="url(#glowGradient)" strokeWidth="5"
       class="beam-blur" filter="url(#beamBlur)" />
     <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
-      stroke="url(#glowGradient)" strokeWidth="3"
+      stroke="url(#glowGradient)" strokeWidth="1.5"
       class="beam-main" />
 
     <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
-      stroke="url(#glowGradient2)" strokeWidth="10"
+      stroke="url(#glowGradient2)" strokeWidth="4"
       class="beam-secondary-blur" filter="url(#beamBlur)" />
     <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
-      stroke="url(#glowGradient2)" strokeWidth="2"
+      stroke="url(#glowGradient2)" strokeWidth="1"
       class="beam-secondary" />
 
     <path d="M 30 18 L 18 18 L 18 30" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
