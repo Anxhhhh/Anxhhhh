@@ -1,4 +1,4 @@
-```aura inline width=860 height=580 align=center
+```aura inline width=860 height=620 align=center
 <div
   style={{
     width: "100%",
@@ -15,7 +15,7 @@
 >
   <svg
     width="860"
-    height="580"
+    height="620"
     style={{
       position: "absolute",
       top: 0,
@@ -107,35 +107,35 @@
         <stop offset="100%" stopColor="white" stopOpacity="0" />
       </radialGradient>
       <mask id="leftMask">
-        <rect width="280" height="580" fill="url(#leftMaskGlow)" />
+        <rect width="280" height="620" fill="url(#leftMaskGlow)" />
       </mask>
     </defs>
 
-    <rect width="860" height="580" fill="url(#grid)" />
-    <rect width="860" height="580" fill="url(#topLeftGlow)" />
-    <rect width="860" height="580" fill="url(#bottomRightGlow)" />
-    <rect width="280" height="580" fill="url(#dotPattern)" mask="url(#leftMask)" />
+    <rect width="860" height="620" fill="url(#grid)" />
+    <rect width="860" height="620" fill="url(#topLeftGlow)" />
+    <rect width="860" height="620" fill="url(#bottomRightGlow)" />
+    <rect width="280" height="620" fill="url(#dotPattern)" mask="url(#leftMask)" />
 
-    <rect width="860" height="580" rx="24" fill="url(#auraGrad)" class="aura-overlay" />
+    <rect width="860" height="620" rx="24" fill="url(#auraGrad)" class="aura-overlay" />
 
-    <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
+    <rect x="0.5" y="0.5" width="859" height="619" rx="24" fill="none"
       stroke="url(#glowGradient)" strokeWidth="5"
       class="beam-blur" filter="url(#beamBlur)" />
-    <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
+    <rect x="0.5" y="0.5" width="859" height="619" rx="24" fill="none"
       stroke="url(#glowGradient)" strokeWidth="1.5"
       class="beam-main" />
 
-    <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
+    <rect x="0.5" y="0.5" width="859" height="619" rx="24" fill="none"
       stroke="url(#glowGradient2)" strokeWidth="4"
       class="beam-secondary-blur" filter="url(#beamBlur)" />
-    <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
+    <rect x="0.5" y="0.5" width="859" height="619" rx="24" fill="none"
       stroke="url(#glowGradient2)" strokeWidth="1"
       class="beam-secondary" />
 
     <path d="M 30 18 L 18 18 L 18 30" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
     <path d="M 830 18 L 842 18 L 842 30" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
-    <path d="M 30 562 L 18 562 L 18 550" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
-    <path d="M 830 562 L 842 562 L 842 550" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
+    <path d="M 30 602 L 18 602 L 18 590" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
+    <path d="M 830 602 L 842 602 L 842 590" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
   </svg>
 
   <div style={{ display: "flex", width: "100%", flex: 1 }}>
@@ -500,14 +500,17 @@
 
 <br />
 
-```aura width=160 height=48 link="https://github.com/Anxhhhh" inline align=center
+```aura width=215 height=70 link="https://github.com/Anxhhhh" inline align=center
 <div
   style={{
     width: "100%",
     height: "100%",
-    background: "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%), #08080c",
-    borderRadius: 24,
-    border: "1px solid rgba(255, 255, 255, 0.08)",
+    background: "#08080c",
+    borderTop: "1px solid rgba(255,255,255,0.08)",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    borderLeft: "1px solid rgba(255,255,255,0.08)",
+    borderTopLeftRadius: 24,
+    borderBottomLeftRadius: 24,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -523,14 +526,25 @@
       left: 0,
       right: 0,
       bottom: 0,
-      background: "radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06) 0%, transparent 70%)",
+      background: "radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%)",
     }}
   />
-  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-    <img
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyIC4yOTdjLTYuNjMgMC0xMiA1LjM3My0xMiAxMiAwIDUuMzAzIDMuNDM4IDkuOCA4LjIwNSAxMS4zODUuNi4xMTMuODItLjI1OC44Mi0uNTc3IDAtLjI4NS0uMDEtMS4wNC0uMDE1LTIuMDQtMy4zMzguNzI0LTQuMDQyLTEuNjEtNC4wNDItMS42MUM0LjQyMiAxOC4wNyAzLjYzMyAxNy43IDMuNjMzIDE3LjdjLTEuMDg3LS43NDQuMDg0LS43MjkuMDg0LS43MjkgMS4yMDUuMDg0IDEuODM4IDEuMjM2IDEuODM4IDEuMjM2IDEuMDcgMS44MzUgMi44MDkgMS4zMDUgMy40OTUuOTk4LjEwOC0uNzc2LjQxNy0xLjMwNS43Ni0xLjYwNS0yLjY2NS0uMy01LjQ2Ni0xLjMzMi01LjQ2Ni01LjkzIDAtMS4zMS40NjUtMi4zOCAxLjIzNS0zLjIyLS4xMzUtLjMwMy0uNTQtMS41MjMuMTA1LTMuMTc2IDAgMCAxLjAwNS0uMzIyIDMuMyAxLjIzLjk2LS4yNjcgMS45OC0uMzk5IDMtLjQwNSAxLjAyLjAwNiAyLjA0LjEzOCAzIC40MDUgMi4yOC0xLjU1MiAzLjI4NS0xLjIzIDMuMjg1LTEuMjMuNjQ1IDEuNjUzLjI0IDIuODczLjEyIDMuMTc2Ljc2NS44NCAxLjIzIDEuOTEgMS4yMyAzLjIyIDAgNC42MS0yLjgwNSA1LjYyNS05LjQ3NSA1LjkyLjQyLjM2LjgxIDEuMDk2LjgxIDIuMjIgMCAxLjYwNi0uMDE1IDIuODk2LS4wMTUgMy4yODYgMCAuMzE1LjIxLjY5LjgyNS41N0MyMC41NjUgMjIuMDkyIDI0IDE3LjU5MiAyNCAxMi4yOTdjMC02LjYyNy01LjM3My0xMi0xMi0xMiIvPjwvc3ZnPg=="
-      style={{ width: 16, height: 16, display: "block" }}
-    />
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "170px",
+      height: "38px",
+      borderRadius: "999px",
+      background: "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)",
+      border: "1px solid rgba(255, 255, 255, 0.12)",
+      gap: "8px",
+    }}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" style={{ width: 16, height: 16 }}>
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 .005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-9.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    </svg>
     <span style={{ fontSize: "13px", fontWeight: 600, color: "#f0f0f5", letterSpacing: "-0.01em" }}>
       GitHub
     </span>
@@ -538,14 +552,15 @@
 </div>
 ```
 
-```aura width=160 height=48 link="https://www.linkedin.com/in/anshraj-singh-thakur-349ab533b/" inline
+```aura width=215 height=70 link="https://www.linkedin.com/in/anshraj-singh-thakur-349ab533b/" inline align=center
 <div
   style={{
     width: "100%",
     height: "100%",
-    background: "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%), #08080c",
-    borderRadius: 24,
-    border: "1px solid rgba(255, 255, 255, 0.08)",
+    background: "#08080c",
+    borderTop: "1px solid rgba(255,255,255,0.08)",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    borderLeft: "1px solid rgba(255,255,255,0.08)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -561,14 +576,25 @@
       left: 0,
       right: 0,
       bottom: 0,
-      background: "radial-gradient(circle at 50% 50%, rgba(0, 119, 181, 0.15) 0%, transparent 70%)",
+      background: "radial-gradient(circle at 50% 50%, rgba(0, 119, 181, 0.12) 0%, transparent 70%)",
     }}
   />
-  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-    <img
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwNzdCNSI+PHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NXY2LjI4NnpNNS4zMzcgNy40MzNjLTEuMTQ0IDAtMi4wNjMtLjkyLTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMHoiLz48L3N2Zz4="
-      style={{ width: 16, height: 16, display: "block" }}
-    />
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "170px",
+      height: "38px",
+      borderRadius: "999px",
+      background: "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)",
+      border: "1px solid rgba(255, 255, 255, 0.12)",
+      gap: "8px",
+    }}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" style={{ width: 16, height: 16 }}>
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.45v6.286zM5.337 7.433c-1.144 0-2.063-.9-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+    </svg>
     <span style={{ fontSize: "13px", fontWeight: 600, color: "#f0f0f5", letterSpacing: "-0.01em" }}>
       LinkedIn
     </span>
@@ -576,14 +602,15 @@
 </div>
 ```
 
-```aura width=160 height=48 link="https://anshraj.dev" inline
+```aura width=215 height=70 link="https://anshraj.dev" inline align=center
 <div
   style={{
     width: "100%",
     height: "100%",
-    background: "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%), #08080c",
-    borderRadius: 24,
-    border: "1px solid rgba(255, 255, 255, 0.08)",
+    background: "#08080c",
+    borderTop: "1px solid rgba(255,255,255,0.08)",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    borderLeft: "1px solid rgba(255,255,255,0.08)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -599,14 +626,27 @@
       left: 0,
       right: 0,
       bottom: 0,
-      background: "radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 70%)",
+      background: "radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.12) 0%, transparent 70%)",
     }}
   />
-  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-    <img
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTg1NWY3IiBzdHJva2Utd2lkdGg9IjIuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxsaW5lIHgxPSIyIiB5MT0iMTIiIHgyPSIyMiIgeTI9IjEyIi8+PHBhdGggZD0iTTEyIDJhMTUuMyAxNS4zIDAgMCAxIDQgMTAgMTUuMyAxNS4zIDAgMCAxLTQgMTAgMTUuMyAxNS4zIDAgMCAxLTQtMTAgMTUuMyAxNS4zIDAgMCAxIDQtMTB6Ii8+PC9zdmc+"
-      style={{ width: 16, height: 16, display: "block" }}
-    />
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "170px",
+      height: "38px",
+      borderRadius: "999px",
+      background: "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)",
+      border: "1px solid rgba(255, 255, 255, 0.12)",
+      gap: "8px",
+    }}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 16, height: 16 }}>
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="2" y1="12" x2="22" y2="12"/>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+    </svg>
     <span style={{ fontSize: "13px", fontWeight: 600, color: "#f0f0f5", letterSpacing: "-0.01em" }}>
       Portfolio
     </span>
@@ -614,14 +654,18 @@
 </div>
 ```
 
-```aura width=160 height=48 link="mailto:anshrajsingh62@gmail.com" inline
+```aura width=215 height=70 link="mailto:anshrajsingh62@gmail.com" inline align=center
 <div
   style={{
     width: "100%",
     height: "100%",
-    background: "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%), #08080c",
-    borderRadius: 24,
-    border: "1px solid rgba(255, 255, 255, 0.08)",
+    background: "#08080c",
+    borderTop: "1px solid rgba(255,255,255,0.08)",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    borderLeft: "1px solid rgba(255,255,255,0.08)",
+    borderRight: "1px solid rgba(255,255,255,0.08)",
+    borderTopRightRadius: 24,
+    borderBottomRightRadius: 24,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -637,18 +681,29 @@
       left: 0,
       right: 0,
       bottom: 0,
-      background: "radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
+      background: "radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.12) 0%, transparent 70%)",
     }}
   />
-  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-    <img
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDZiNmQ0IiBzdHJva2Utd2lkdGg9IjIuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNNCA0aDE2YzEuMSAwIDIgLjkgMiAydjEyYzAgMS4xLS45IDItMiAySDRjLTEuMSAwLTItLjktMi0yVjZjMC0xLjEuOS0yIDItMnoiLz48cG9seWxpbmUgcG9pbnRzPSIyMiw2IDEyLDEzIDIsNiIvPjwvc3ZnPg=="
-      style={{ width: 16, height: 16, display: "block" }}
-    />
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "170px",
+      height: "38px",
+      borderRadius: "999px",
+      background: "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)",
+      border: "1px solid rgba(255, 255, 255, 0.12)",
+      gap: "8px",
+    }}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 16, height: 16 }}>
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
     <span style={{ fontSize: "13px", fontWeight: 600, color: "#f0f0f5", letterSpacing: "-0.01em" }}>
       Email
     </span>
   </div>
 </div>
 ```
-
