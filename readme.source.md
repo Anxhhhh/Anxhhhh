@@ -25,19 +25,82 @@
     <defs>
       <style>{`
         @keyframes borderBeam {
-          0% { stroke-dashoffset: 2835; }
+          0%   { stroke-dashoffset: 2835; }
           100% { stroke-dashoffset: 0; }
         }
-        .glow-path {
-          stroke-dasharray: 180 2655;
-          animation: borderBeam 6s linear infinite;
+        @keyframes borderBeamReverse {
+          0%   { stroke-dashoffset: 0; }
+          100% { stroke-dashoffset: 2835; }
         }
+        @keyframes bracketPulse {
+          0%, 100% { opacity: 0.2; stroke: rgba(255,255,255,0.2); }
+          50%       { opacity: 1;   stroke: #a855f7; filter: drop-shadow(0 0 4px #a855f7); }
+        }
+        @keyframes avatarHalo {
+          0%, 100% { opacity: 0.4; r: 62; }
+          50%       { opacity: 1;   r: 68; }
+        }
+        @keyframes avatarHaloOuter {
+          0%, 100% { opacity: 0.15; r: 75; }
+          50%       { opacity: 0.5;  r: 82; }
+        }
+        @keyframes breatheAura {
+          0%, 100% { opacity: 0; }
+          50%       { opacity: 1; }
+        }
+        .beam-main {
+          stroke-dasharray: 260 2315;
+          animation: borderBeam 4s linear infinite;
+        }
+        .beam-blur {
+          stroke-dasharray: 260 2315;
+          animation: borderBeam 4s linear infinite;
+        }
+        .beam-secondary {
+          stroke-dasharray: 140 2555;
+          animation: borderBeamReverse 6s linear infinite;
+        }
+        .beam-secondary-blur {
+          stroke-dasharray: 140 2555;
+          animation: borderBeamReverse 6s linear infinite;
+        }
+        .bracket { animation: bracketPulse 3s ease-in-out infinite; }
+        .bracket:nth-child(2) { animation-delay: 0.75s; }
+        .bracket:nth-child(3) { animation-delay: 1.5s; }
+        .bracket:nth-child(4) { animation-delay: 2.25s; }
+        .avatar-halo       { animation: avatarHalo      3.5s ease-in-out infinite; }
+        .avatar-halo-outer { animation: avatarHaloOuter 3.5s ease-in-out infinite; animation-delay: 0.4s; }
+        .aura-overlay      { animation: breatheAura     5s ease-in-out infinite; }
       `}</style>
+
+      <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="7" result="blur" />
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="beamBlur" x="-10%" y="-10%" width="120%" height="120%">
+        <feGaussianBlur stdDeviation="6" />
+      </filter>
+      <filter id="haloBlur" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="10" />
+      </filter>
+
       <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#a855f7" />
-        <stop offset="50%" stopColor="#06b6d4" />
+        <stop offset="0%"   stopColor="#a855f7" />
+        <stop offset="40%"  stopColor="#06b6d4" />
+        <stop offset="70%"  stopColor="#7c3aed" />
         <stop offset="100%" stopColor="#a855f7" />
       </linearGradient>
+      <linearGradient id="glowGradient2" x1="100%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%"   stopColor="#06b6d4" />
+        <stop offset="50%"  stopColor="#a855f7" />
+        <stop offset="100%" stopColor="#06b6d4" />
+      </linearGradient>
+      <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stopColor="#7c3aed" stopOpacity="0.12" />
+        <stop offset="60%"  stopColor="#06b6d4" stopOpacity="0.05" />
+        <stop offset="100%" stopColor="transparent" stopOpacity="0" />
+      </radialGradient>
+
       <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
         <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.02)" strokeWidth="1" />
       </pattern>
@@ -45,40 +108,56 @@
         <circle cx="9" cy="9" r="1" fill="rgba(255,255,255,0.12)" />
       </pattern>
       <radialGradient id="topLeftGlow" cx="0%" cy="0%" r="100%">
-        <stop offset="0%" stopColor="rgba(255,255,255,0.04)" />
+        <stop offset="0%"   stopColor="rgba(255,255,255,0.04)" />
         <stop offset="100%" stopColor="rgba(255,255,255,0)" />
       </radialGradient>
       <radialGradient id="bottomRightGlow" cx="100%" cy="100%" r="100%">
-        <stop offset="0%" stopColor="rgba(255,255,255,0.025)" />
+        <stop offset="0%"   stopColor="rgba(255,255,255,0.025)" />
         <stop offset="100%" stopColor="rgba(255,255,255,0)" />
       </radialGradient>
       <radialGradient id="leftMaskGlow" cx="50%" cy="35%" r="60%">
-        <stop offset="0%" stopColor="white" stopOpacity="1" />
+        <stop offset="0%"   stopColor="white" stopOpacity="1" />
         <stop offset="100%" stopColor="white" stopOpacity="0" />
       </radialGradient>
       <mask id="leftMask">
         <rect width="280" height="580" fill="url(#leftMaskGlow)" />
       </mask>
     </defs>
+
     <rect width="860" height="580" fill="url(#grid)" />
     <rect width="860" height="580" fill="url(#topLeftGlow)" />
     <rect width="860" height="580" fill="url(#bottomRightGlow)" />
     <rect width="280" height="580" fill="url(#dotPattern)" mask="url(#leftMask)" />
-    <rect
-      x="0.5"
-      y="0.5"
-      width="859"
-      height="579"
-      rx="24"
-      fill="none"
-      stroke="url(#glowGradient)"
-      strokeWidth="1.5"
-      class="glow-path"
-    />
-    <path d="M 28 16 L 16 16 L 16 28" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-    <path d="M 832 16 L 844 16 L 844 28" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-    <path d="M 28 564 L 16 564 L 16 552" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-    <path d="M 832 564 L 844 564 L 844 552" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+
+    <rect width="860" height="580" rx="24" fill="url(#auraGrad)" class="aura-overlay" />
+
+    <circle cx="140" cy="290" r="75" fill="none"
+      stroke="url(#glowGradient)" strokeWidth="18"
+      filter="url(#haloBlur)"
+      class="avatar-halo-outer" />
+    <circle cx="140" cy="290" r="62" fill="none"
+      stroke="url(#glowGradient)" strokeWidth="8"
+      filter="url(#haloBlur)"
+      class="avatar-halo" />
+
+    <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
+      stroke="url(#glowGradient)" strokeWidth="14"
+      class="beam-blur" filter="url(#beamBlur)" />
+    <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
+      stroke="url(#glowGradient)" strokeWidth="3"
+      class="beam-main" />
+
+    <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
+      stroke="url(#glowGradient2)" strokeWidth="10"
+      class="beam-secondary-blur" filter="url(#beamBlur)" />
+    <rect x="0.5" y="0.5" width="859" height="579" rx="24" fill="none"
+      stroke="url(#glowGradient2)" strokeWidth="2"
+      class="beam-secondary" />
+
+    <path d="M 30 18 L 18 18 L 18 30" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
+    <path d="M 830 18 L 842 18 L 842 30" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
+    <path d="M 30 562 L 18 562 L 18 550" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
+    <path d="M 830 562 L 842 562 L 842 550" fill="none" stroke="#a855f7" strokeWidth="2" class="bracket" />
   </svg>
 
   <div style={{ display: "flex", width: "100%", flex: 1 }}>
